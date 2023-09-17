@@ -23,5 +23,6 @@ with open("./grocery_dataset.csv", "r") as file:
                 transactional_matrix[i][j] = 1
 
     df = pd.DataFrame(transactional_matrix)
-    df.to_csv("transactional_matrix.csv", index=False, header=False)
+    df.index += 1
+    df.to_csv("transactional_matrix.csv", header=columns)
     print(df)
